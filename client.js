@@ -1,10 +1,11 @@
+const {IP, PORT} = require("./constants");
 const net = require("net");
 
 // establishes a connection with the game server
 const connect = function() {
   const conn = net.createConnection({
-    host: '165.227.47.243',
-    port: 50541,
+    host: IP,
+    port: PORT,
   });
 
   //Updating the connect function to handle incoming data and console.log it for the player.
@@ -23,7 +24,6 @@ const connect = function() {
     conn.write("Name: LEA");
   });
 
-
   // moving the snake up by one spot on connect
 
   // conn.on('connect', () => {
@@ -38,22 +38,8 @@ const connect = function() {
   //   }, delay)
   // }
 
-
-  // setTimeout(() => {
-  //   conn.write("Move: up");
-
-  // }, 2000)
-
-  // setTimeout(() => {
-  //   conn.write("Move: up");
-
-  // }, 3000)
-
-
   return conn;
 };
-
-
 
 
 
