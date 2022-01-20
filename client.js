@@ -23,6 +23,33 @@ const connect = function() {
     conn.write("Name: LEA");
   });
 
+
+  // moving the snake up by one spot on connect
+
+  // conn.on('connect', () => {
+  //   conn.write("Move: up");
+  // });
+
+  // moving the snake up incrementally until the stop condition is met
+
+  // for (let delay = 0; delay < 30000; delay = delay + 500) {
+  //   setTimeout(() => {
+  //     conn.write("Move: up");
+  //   }, delay)
+  // }
+
+
+  // setTimeout(() => {
+  //   conn.write("Move: up");
+
+  // }, 2000)
+
+  // setTimeout(() => {
+  //   conn.write("Move: up");
+
+  // }, 3000)
+
+
   return conn;
 };
 
